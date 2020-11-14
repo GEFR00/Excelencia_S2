@@ -7,7 +7,7 @@ package vista;
 
 /**
  *
- * @author Lobo
+ * @author Lobocarkc
  */
 public class Select_user extends javax.swing.JFrame {
 

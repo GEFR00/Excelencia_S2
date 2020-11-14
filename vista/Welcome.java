@@ -2,7 +2,7 @@ package vista;
 
 /**
  *
- * @author Lobo
+ * @author Lobocrack
  */
 public class Welcome extends javax.swing.JFrame {
 
