@@ -69,6 +69,7 @@ public class Vista_admin extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_vista_admin02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_vista_admin02ActionPerformed
