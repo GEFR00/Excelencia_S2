@@ -16,6 +16,10 @@ public class AlumnoSQL implements AlumnoDAO {
     private String login = "luxo666@hotmail.com";
     private Connection con;
     final String VERIFICA = "SELECT login FROM alumno"; //cambiar y usar id
+    final String OBTENID = "SELECT * FROM alumno";
+    String notaAlumId = null;
+    
+    private String password = "Jugarplay2";
     
     
     //Sentencias SQL
@@ -45,7 +49,7 @@ public class AlumnoSQL implements AlumnoDAO {
     }
     
     public boolean verificaAlum(Login_alum obj) throws SQLException {
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", "1234");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(VERIFICA);
         boolean encontrado = false;
@@ -64,23 +68,52 @@ public class AlumnoSQL implements AlumnoDAO {
         return encontrado;
     }
     
-    public boolean estaAlumno(Login_alum obj) throws SQLException {
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", "Jugarplay2");
+    public int getIdAlum(Login_alum obj) throws SQLException {
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
-        ResultSet rs = stmt.executeQuery(VERIFICA);
-        boolean encontrado = false;
-        
+        ResultSet rs = stmt.executeQuery(OBTENID);
+        int id = 0;
         while(rs.next()) {
-            if(rs.getString("login").equals(obj.texto_alum())) {
-                encontrado = true;
-                return encontrado;
-            } else { 
+            if(rs.getString("login").equals(obj.TextAlum())) {
+                id = rs.getInt("id");
+                return id;
+            } else {
+                
             }
         }
-        
-        return encontrado;
+        con.close();
+        stmt.close();
+        rs.close();
+        return id;
     }
     
+    public void obtenerNotas(Login_alum obj) throws SQLException {
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
+        Statement stmt = con.createStatement();
+        AlumnoSQL aluSQL = new AlumnoSQL();
+        notaAlumId = Integer.toString(aluSQL.getIdAlum(obj));
+        ResultSet rs = stmt.executeQuery("SELECT nota FROM nota WHERE alumno_id="+notaAlumId);
+        
+        
+        while(rs.next()) {
+            float nota = rs.getFloat("nota");
+            System.out.println("Nota: "+nota);
+        }
+        
+        rs.close();
+        
+        ResultSet rss = stmt.executeQuery("SELECT asignatura_id FROM nota WHERE alumno_id="+notaAlumId);
+        while(rss.next()) {
+            int asignatura = rss.getInt("asignatura_id");
+            System.out.println("Asignatura: "+asignatura);
+        }
+        
+        con.close();
+        stmt.close();
+        rss.close();
+   
+    }
+        
 }
 
 
