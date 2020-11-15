@@ -1,14 +1,15 @@
 package modelo;
-public class Alumno {
-    //Atributos
-    private String nombre, apellido, login, clave;
+public class Profesor {
+    //Atributos 
+    private String nombre, apellido, clave, login, email;
     private int id;
     
-    public Alumno(String nombre, String Apellido, String login, String clave, int id) {
+    public Profesor(String nombre, String apellido, String clave, String login, String email, int id) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.login = login;
         this.clave = clave;
+        this.email = email;
         this.id = id;
     }
 
@@ -28,6 +29,14 @@ public class Alumno {
         this.apellido = apellido;
     }
 
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
     public String getLogin() {
         return login;
     }
@@ -36,12 +45,12 @@ public class Alumno {
         this.login = login;
     }
 
-    public String getClave() {
-        return clave;
+    public String getEmail() {
+        return email;
     }
 
-    public void setClave(String clave) {
-        this.clave = clave;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getId() {
@@ -51,12 +60,6 @@ public class Alumno {
     public void setId(int id) {
         this.id = id;
     }
-    
-    
-    
-    
-    
-    
     
     
     
