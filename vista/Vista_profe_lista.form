@@ -33,7 +33,7 @@
                   </Group>
                   <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="83" max="32767" attributes="0"/>
+              <EmptySpace pref="86" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -79,15 +79,18 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Asignatura: "/>
+        <Property name="text" type="java.lang.String" value="Asignatura:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Asignatura: "/>
+        <Property name="text" type="java.lang.String" value="Asignatura:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Text_lista_asignatura01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fisica"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Text_lista_asignatura02">
     </Component>
@@ -101,7 +104,10 @@
         <Component class="javax.swing.JList" name="Text_lista_lista01">
           <Properties>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-              <StringArray count="0"/>
+              <StringArray count="2">
+                <StringItem index="0" value="Anitala Huerfanita"/>
+                <StringItem index="1" value="Pedro Piedra"/>
+              </StringArray>
             </Property>
           </Properties>
           <AuxValues>

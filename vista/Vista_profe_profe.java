@@ -34,6 +34,11 @@ public class Vista_profe_profe extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Text_profe_profe.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Macarena Sandoval", "Fernanda Meneses", "Pablo Ruiz", "Raul Espinoza" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane1.setViewportView(Text_profe_profe);
 
         Button_profe_profe_back.setText("Volver");

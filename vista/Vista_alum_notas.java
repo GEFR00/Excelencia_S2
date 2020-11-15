@@ -60,6 +60,14 @@ public class Vista_alum_notas extends javax.swing.JFrame {
 
         jLabel4.setText("Nota: ");
 
+        Text_notas_asignatura01.setText("Lenguaje");
+
+        Text_notas_asignaturas02.setText("Ciencia");
+
+        Text_notas_notas01.setText("2.1");
+
+        Text_notas_notas02.setText("7.0");
+
         Button_alum_notas_back.setText("Volver");
         Button_alum_notas_back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

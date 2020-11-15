@@ -34,6 +34,11 @@ public class Vista_alum_lista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Text_alum_lista.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Lucho Jara", "Whitney Perez" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane2.setViewportView(Text_alum_lista);
 
         Button_alum_lista_back.setText("Volver");

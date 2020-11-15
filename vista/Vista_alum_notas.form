@@ -82,7 +82,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Text_notas_asignatura01" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="Text_notas_asignatura01" alignment="0" min="-2" pref="16" max="-2" attributes="0"/>
                   <Component id="Text_notas_notas01" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="106" max="32767" attributes="0"/>
@@ -120,12 +120,24 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Text_notas_asignatura01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lenguaje"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Text_notas_asignaturas02">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ciencia"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Text_notas_notas01">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="2.1"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Text_notas_notas02">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="7.0"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="Button_alum_notas_back">
       <Properties>

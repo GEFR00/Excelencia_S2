@@ -40,10 +40,17 @@ public class Vista_profe_lista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Asignatura: ");
+        jLabel1.setText("Asignatura:");
 
-        jLabel2.setText("Asignatura: ");
+        jLabel2.setText("Asignatura:");
 
+        Text_lista_asignatura01.setText("Fisica");
+
+        Text_lista_lista01.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Anitala Huerfanita", "Pedro Piedra" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jScrollPane1.setViewportView(Text_lista_lista01);
 
         jScrollPane2.setViewportView(Text_lista_lista02);
@@ -74,7 +81,7 @@ public class Vista_profe_lista extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Text_lista_asignatura01, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
