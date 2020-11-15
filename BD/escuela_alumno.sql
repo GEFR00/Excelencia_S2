@@ -28,7 +28,10 @@ CREATE TABLE `alumno` (
   `clave` varchar(20) DEFAULT NULL,
   `nombre` varchar(45) DEFAULT NULL,
   `apellidos` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `nivelAlumn_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `nivelAlumn_id_idx` (`nivelAlumn_id`),
+  CONSTRAINT `nivelAlumn_id` FOREIGN KEY (`nivelAlumn_id`) REFERENCES `nivel` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,7 +41,7 @@ CREATE TABLE `alumno` (
 
 LOCK TABLES `alumno` WRITE;
 /*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
-INSERT INTO `alumno` VALUES (1,'luxo666@hotmail.com','febrerO12dies','Lucho','Jara'),(2,'huerfanos@yahoo.es','peluza69','Anitala','Huerfanita'),(3,'pedrito_23c@gmail.com','Fornit3','Pedro','Piedra'),(4,'wp2000@gmail.com','WP2000','Whitney','Perez');
+INSERT INTO `alumno` VALUES (1,'luxo666@hotmail.com','febrerO12dies','Lucho','Jara',1),(2,'huerfanos@yahoo.es','peluza69','Anitala','Huerfanita',2),(3,'pedrito_23c@gmail.com','Fornit3','Pedro','Piedra',2),(4,'wp2000@gmail.com','WP2000','Whitney','Perez',1);
 /*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-14  1:54:32
+-- Dump completed on 2020-11-15 20:35:17

@@ -31,7 +31,7 @@ CREATE TABLE `profesor` (
   `email` varchar(80) DEFAULT NULL,
   `especialista` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `profesor` (
 
 LOCK TABLES `profesor` WRITE;
 /*!40000 ALTER TABLE `profesor` DISABLE KEYS */;
-INSERT INTO `profesor` VALUES (1,'MacarenaS_profe','nada.Lolñ','Macarena','Sandoval','maca99sando@hotmail.es','Bioquimica'),(2,'MariFer_profe','profemefe_18','Fernanda','Meneses','mafefe@outlook.com','Pedagogia en Fisica'),(3,'PabloR_profe','magda2902_PR','Pablo','Ruiz','ruizPH@gmail.com','Ingeniero en matematicas');
+INSERT INTO `profesor` VALUES (1,'MacarenaS_profe','nada.Lolñ','Macarena','Sandoval','maca99sando@hotmail.es','Bioquimica'),(2,'MariFer_profe','profemefe_18','Fernanda','Meneses','mafefe@outlook.com','Pedagogia en Fisica'),(3,'PabloR_profe','magda2902_PR','Pablo','Ruiz','ruizPH@gmail.com','Ingeniero en matematicas'),(4,'RaulE_profe','RREZ_p0','Raul','Espinoza','rrespinoz@gmail.com','Pedagogia en lenguaje');
 /*!40000 ALTER TABLE `profesor` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-14  1:54:33
+-- Dump completed on 2020-11-15 20:35:17

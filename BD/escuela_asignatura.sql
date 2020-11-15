@@ -41,7 +41,7 @@ CREATE TABLE `asignatura` (
 
 LOCK TABLES `asignatura` WRITE;
 /*!40000 ALTER TABLE `asignatura` DISABLE KEYS */;
-INSERT INTO `asignatura` VALUES (1,'Lenguaje',NULL,NULL),(2,'Fisica',1,2),(3,'Ciencias',2,1),(4,'Matematicas',1,3);
+INSERT INTO `asignatura` VALUES (1,'Lenguaje',1,4),(2,'Fisica',2,2),(3,'Ciencias',1,1),(4,'Matematicas',2,3);
 /*!40000 ALTER TABLE `asignatura` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-14  1:54:32
+-- Dump completed on 2020-11-15 20:35:16

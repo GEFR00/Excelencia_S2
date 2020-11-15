@@ -33,7 +33,7 @@ CREATE TABLE `nota` (
   KEY `asignatura_id_idx` (`asignatura_id`),
   CONSTRAINT `alumno_id` FOREIGN KEY (`alumno_id`) REFERENCES `alumno` (`id`),
   CONSTRAINT `asignatura_id` FOREIGN KEY (`asignatura_id`) REFERENCES `asignatura` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `nota` (
 
 LOCK TABLES `nota` WRITE;
 /*!40000 ALTER TABLE `nota` DISABLE KEYS */;
-INSERT INTO `nota` VALUES (1,NULL,2.1,NULL,NULL);
+INSERT INTO `nota` VALUES (1,1,2.1,1,1),(2,1,7.0,3,1),(3,1,6.8,2,2),(4,1,5.7,4,2),(5,1,4.0,2,3),(6,1,4.1,4,3),(7,1,5.6,1,4),(8,1,3.2,3,4);
 /*!40000 ALTER TABLE `nota` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-14  1:54:32
+-- Dump completed on 2020-11-15 20:35:16
