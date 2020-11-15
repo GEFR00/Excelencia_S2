@@ -10,6 +10,11 @@ package vista;
  * @author Lobo
  */
 public class Login_profe extends javax.swing.JFrame {
+    
+    public String texto_profe(){
+        String usuario_profe = Text_login_profe01.getText();
+        return usuario_profe;
+    }
 
     /**
      * Creates new form Login

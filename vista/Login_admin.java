@@ -5,11 +5,18 @@
  */
 package vista;
 
+
+
 /**
  *
  * @author Lobo
  */
 public class Login_admin extends javax.swing.JFrame {
+    
+    public String texto_admin(){
+        String usuario_admin = Text_login_admin01.getText();
+        return usuario_admin;
+    }
 
     /**
      * Creates new form Login

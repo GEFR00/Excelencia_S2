@@ -10,6 +10,11 @@ package vista;
  * @author Lobo
  */
 public class Login_alum extends javax.swing.JFrame {
+    
+    public String texto_alum(){
+        String usuario_alum = Text_login_alum01.getText();
+        return usuario_alum;
+    }
 
     /**
      * Creates new form Login
