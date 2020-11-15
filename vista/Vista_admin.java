@@ -30,6 +30,7 @@ public class Vista_admin extends javax.swing.JFrame {
         Button_vista_admin01 = new javax.swing.JButton();
         Button_vista_admin02 = new javax.swing.JButton();
         Button_vista_admin03 = new javax.swing.JButton();
+        Admin_LogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,28 +45,39 @@ public class Vista_admin extends javax.swing.JFrame {
 
         Button_vista_admin03.setText("Modificar informacion");
 
+        Admin_LogOut.setText("Cerrar sesion");
+        Admin_LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Admin_LogOutMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Button_vista_admin03, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Button_vista_admin02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Button_vista_admin01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(120, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(136, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Button_vista_admin03)
+                    .addComponent(Button_vista_admin02, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Button_vista_admin01, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(131, 131, 131))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Admin_LogOut))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addComponent(Admin_LogOut)
+                .addGap(32, 32, 32)
                 .addComponent(Button_vista_admin01)
                 .addGap(44, 44, 44)
                 .addComponent(Button_vista_admin02)
-                .addGap(43, 43, 43)
+                .addGap(44, 44, 44)
                 .addComponent(Button_vista_admin03)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         pack();
@@ -75,6 +87,12 @@ public class Vista_admin extends javax.swing.JFrame {
     private void Button_vista_admin02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_vista_admin02ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Button_vista_admin02ActionPerformed
+
+    private void Admin_LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Admin_LogOutMouseClicked
+        Select_user select_user = new Select_user();
+        select_user.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Admin_LogOutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -112,6 +130,7 @@ public class Vista_admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Admin_LogOut;
     private javax.swing.JButton Button_vista_admin01;
     private javax.swing.JButton Button_vista_admin02;
     private javax.swing.JButton Button_vista_admin03;

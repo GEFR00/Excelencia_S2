@@ -30,6 +30,7 @@ public class Vista_alum_lista extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         Text_alum_lista = new javax.swing.JList<>();
         Button_alum_lista_back = new javax.swing.JButton();
+        alum_lista_LogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,6 +40,13 @@ public class Vista_alum_lista extends javax.swing.JFrame {
         Button_alum_lista_back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Button_alum_lista_backMouseClicked(evt);
+            }
+        });
+
+        alum_lista_LogOut.setText("Cerrar Sesion");
+        alum_lista_LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                alum_lista_LogOutMouseClicked(evt);
             }
         });
 
@@ -53,11 +61,15 @@ public class Vista_alum_lista extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Button_alum_lista_back)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(alum_lista_LogOut))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addComponent(alum_lista_LogOut)
+                .addGap(17, 17, 17)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(Button_alum_lista_back))
@@ -72,6 +84,12 @@ public class Vista_alum_lista extends javax.swing.JFrame {
         vista_alum.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_alum_lista_backMouseClicked
+
+    private void alum_lista_LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_alum_lista_LogOutMouseClicked
+        Select_user select_user = new Select_user();
+        select_user.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_alum_lista_LogOutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -111,6 +129,7 @@ public class Vista_alum_lista extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_alum_lista_back;
     private javax.swing.JList<String> Text_alum_lista;
+    private javax.swing.JButton alum_lista_LogOut;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
