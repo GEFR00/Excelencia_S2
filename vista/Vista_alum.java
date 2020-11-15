@@ -10,6 +10,8 @@ package vista;
  * @author Lobo
  */
 public class Vista_alum extends javax.swing.JFrame {
+    
+    
 
     /**
      * Creates new form Vista_alumno

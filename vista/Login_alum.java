@@ -5,17 +5,24 @@
  */
 package vista;
 
+import DAO.MySQL.AlumnoSQL;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Lobo
  */
 public class Login_alum extends javax.swing.JFrame {
     
-    public String texto_alum(){
-        String usuario_alum = Text_login_alum01.getText();
-        return usuario_alum;
+    public String TextAlum(){
+        String usuario = Text_login_alum01.getText();
+        return usuario;
+        
     }
-
+    
+    
     /**
      * Creates new form Login
      */
@@ -115,9 +122,21 @@ public class Login_alum extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_login_backMouseClicked
 
     private void Button_login_alumMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_login_alumMouseClicked
-        Vista_alum vista_alum = new Vista_alum();
-        vista_alum.setVisible(true);
-        this.dispose();
+        AlumnoSQL alumnosql = new AlumnoSQL();
+        Login_alum login_alum = new Login_alum();
+
+        try {
+            if (alumnosql.verificaAlum(login_alum) == true){
+                System.out.println("Conectado a la BD");
+                Vista_alum vista_alum = new Vista_alum();
+                vista_alum.setVisible(true);
+                this.dispose();
+            } else{
+                System.out.println("No conectado a la BD");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Login_alum.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_Button_login_alumMouseClicked
 
     private void Text_login_alum02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text_login_alum02ActionPerformed

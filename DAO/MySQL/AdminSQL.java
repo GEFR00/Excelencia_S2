@@ -1,57 +1,54 @@
 package DAO.MySQL;
-import DAO.AlumnoDAO;
+
+import DAO.AdminDAO;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import modelo.Alumno;
+import modelo.Administrador;
 import vista.*;
 
-public class AlumnoSQL implements AlumnoDAO {
-    private String login = "luxo666@hotmail.com";
+public class AdminSQL implements AdminDAO{
+
+    private String login = "GerardoAD";
     private Connection con;
-    final String VERIFICA = "SELECT login FROM alumno"; //cambiar y usar id
+    final String VERIFICA = "SELECT login FROM administrador"; //cambiar y usar id
     
-    
-    //Sentencias SQL
     @Override
-    public void insertar(Alumno alum) {
+    public void insertar(Administrador obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<Alumno> obtenerTodos() {
+    public List<Administrador> obtenerTodos() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void eliminar(Alumno alum) {
+    public void eliminar(Administrador obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void modificar(Alumno alum) {
+    public void modificar(Administrador obj) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Alumno obtener(Integer id) {
+    public Administrador obtener(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public boolean verificaAlum(Login_alum obj) throws SQLException {
+    public boolean verificaAdmin(Login_admin obj) throws SQLException {
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", "1234");
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(VERIFICA);
         boolean encontrado = false;
         
         while(rs.next()) {
-            if(rs.getString("login").equals(obj.TextAlum())) {
+            if(rs.getString("login").equals(obj.TextAdmin())) {
                 encontrado = true;
                 return encontrado;    
             } else {
@@ -63,9 +60,4 @@ public class AlumnoSQL implements AlumnoDAO {
         rs.close();
         return encontrado;
     }
-
-    
 }
-
-
-

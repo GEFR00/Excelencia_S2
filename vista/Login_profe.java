@@ -5,13 +5,18 @@
  */
 package vista;
 
+import DAO.MySQL.ProfesorSQL;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Lobo
  */
 public class Login_profe extends javax.swing.JFrame {
     
-    public String texto_profe(){
+    public String TextProfe(){
         String usuario_profe = Text_login_profe01.getText();
         return usuario_profe;
     }
@@ -110,9 +115,21 @@ public class Login_profe extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_login_backMouseClicked
 
     private void Button_login_profeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_login_profeMouseClicked
-        Vista_profe vista_profe = new Vista_profe();
-        vista_profe.setVisible(true);
-        this.dispose();
+        ProfesorSQL profesorsql = new ProfesorSQL();
+        Login_profe login_profe = new Login_profe();
+
+        try {
+            if (profesorsql.verificaProfe(login_profe) == true){
+                System.out.println("Conectado a la BD");
+                Vista_profe vista_profe = new Vista_profe();
+                vista_profe.setVisible(true);
+                this.dispose();
+            } else{
+                System.out.println("No conectado a la BD");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Login_alum.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_Button_login_profeMouseClicked
 
     /**

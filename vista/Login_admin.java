@@ -5,6 +5,11 @@
  */
 package vista;
 
+import DAO.MySQL.AdminSQL;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 
 /**
@@ -13,7 +18,7 @@ package vista;
  */
 public class Login_admin extends javax.swing.JFrame {
     
-    public String texto_admin(){
+    public String TextAdmin(){
         String usuario_admin = Text_login_admin01.getText();
         return usuario_admin;
     }
@@ -112,9 +117,21 @@ public class Login_admin extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_login_backMouseClicked
 
     private void Button_login_adminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_login_adminMouseClicked
-        Vista_admin vista_admin = new Vista_admin();
-        vista_admin.setVisible(true);
-        this.dispose();
+        AdminSQL alumnosql = new AdminSQL();
+        Login_admin login_admin = new Login_admin();
+
+        try {
+            if (alumnosql.verificaAdmin(login_admin) == true){
+                System.out.println("Conectado a la BD");
+                Vista_admin vista_admin = new Vista_admin();
+                vista_admin.setVisible(true);
+                this.dispose();
+            } else{
+                System.out.println("No conectado a la BD");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Login_alum.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_Button_login_adminMouseClicked
 
     /**

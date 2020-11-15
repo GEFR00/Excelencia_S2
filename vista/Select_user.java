@@ -9,7 +9,7 @@ package vista;
  *
  * @author Lobocarkc
  */
-public class Select_user extends javax.swing.JFrame {
+public class Select_user extends javax.swing.JFrame { 
 
     /**
      * Creates new form Select_user
