@@ -27,12 +27,17 @@
               <Component id="Button_profe_agregar_back" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="328" max="32767" attributes="0"/>
           </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="profe_agregar_LogOut" min="-2" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="278" max="32767" attributes="0"/>
+              <Component id="profe_agregar_LogOut" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="256" max="32767" attributes="0"/>
               <Component id="Button_profe_agregar_back" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -45,6 +50,14 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_profe_agregar_backMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="profe_agregar_LogOut">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cerrar Sesion"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="profe_agregar_LogOutMouseClicked"/>
       </Events>
     </Component>
   </SubComponents>

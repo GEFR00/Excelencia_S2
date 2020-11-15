@@ -32,6 +32,7 @@ public class Vista_alum extends javax.swing.JFrame {
         Button_vista_alum01 = new javax.swing.JButton();
         Button_vista_alum02 = new javax.swing.JButton();
         Button_vista_alum03 = new javax.swing.JButton();
+        Alum_LogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +57,13 @@ public class Vista_alum extends javax.swing.JFrame {
             }
         });
 
+        Alum_LogOut.setText("Cerrar sesion");
+        Alum_LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Alum_LogOutMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -67,11 +75,15 @@ public class Vista_alum extends javax.swing.JFrame {
                     .addComponent(Button_vista_alum02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Button_vista_alum01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(138, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Alum_LogOut))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addComponent(Alum_LogOut)
+                .addGap(32, 32, 32)
                 .addComponent(Button_vista_alum01)
                 .addGap(47, 47, 47)
                 .addComponent(Button_vista_alum02)
@@ -101,6 +113,12 @@ public class Vista_alum extends javax.swing.JFrame {
         vista_alum_profe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_vista_alum03MouseClicked
+
+    private void Alum_LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Alum_LogOutMouseClicked
+        Select_user select_user = new Select_user();
+        select_user.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Alum_LogOutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -139,6 +157,7 @@ public class Vista_alum extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Alum_LogOut;
     private javax.swing.JButton Button_vista_alum01;
     private javax.swing.JButton Button_vista_alum02;
     private javax.swing.JButton Button_vista_alum03;

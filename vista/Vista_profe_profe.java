@@ -30,6 +30,7 @@ public class Vista_profe_profe extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Text_profe_profe = new javax.swing.JList<>();
         Button_profe_profe_back = new javax.swing.JButton();
+        profe_profe_LogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,6 +40,13 @@ public class Vista_profe_profe extends javax.swing.JFrame {
         Button_profe_profe_back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Button_profe_profe_backMouseClicked(evt);
+            }
+        });
+
+        profe_profe_LogOut.setText("Cerrar Sesion");
+        profe_profe_LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profe_profe_LogOutMouseClicked(evt);
             }
         });
 
@@ -53,11 +61,15 @@ public class Vista_profe_profe extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Button_profe_profe_back)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(profe_profe_LogOut))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(108, Short.MAX_VALUE)
+                .addComponent(profe_profe_LogOut)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75)
                 .addComponent(Button_profe_profe_back))
@@ -72,6 +84,12 @@ public class Vista_profe_profe extends javax.swing.JFrame {
         vista_profe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_profe_profe_backMouseClicked
+
+    private void profe_profe_LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profe_profe_LogOutMouseClicked
+        Select_user select_user = new Select_user();
+        select_user.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_profe_profe_LogOutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -112,5 +130,6 @@ public class Vista_profe_profe extends javax.swing.JFrame {
     private javax.swing.JButton Button_profe_profe_back;
     private javax.swing.JList<String> Text_profe_profe;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton profe_profe_LogOut;
     // End of variables declaration//GEN-END:variables
 }

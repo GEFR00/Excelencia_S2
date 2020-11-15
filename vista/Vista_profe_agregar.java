@@ -28,6 +28,7 @@ public class Vista_profe_agregar extends javax.swing.JFrame {
     private void initComponents() {
 
         Button_profe_agregar_back = new javax.swing.JButton();
+        profe_agregar_LogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,6 +39,13 @@ public class Vista_profe_agregar extends javax.swing.JFrame {
             }
         });
 
+        profe_agregar_LogOut.setText("Cerrar Sesion");
+        profe_agregar_LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profe_agregar_LogOutMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -45,11 +53,15 @@ public class Vista_profe_agregar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Button_profe_agregar_back)
                 .addGap(0, 328, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(profe_agregar_LogOut))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 278, Short.MAX_VALUE)
+                .addComponent(profe_agregar_LogOut)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 256, Short.MAX_VALUE)
                 .addComponent(Button_profe_agregar_back))
         );
 
@@ -62,6 +74,12 @@ public class Vista_profe_agregar extends javax.swing.JFrame {
         vista_profe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_profe_agregar_backMouseClicked
+
+    private void profe_agregar_LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profe_agregar_LogOutMouseClicked
+        Select_user select_user = new Select_user();
+        select_user.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_profe_agregar_LogOutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -100,5 +118,6 @@ public class Vista_profe_agregar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_profe_agregar_back;
+    private javax.swing.JButton profe_agregar_LogOut;
     // End of variables declaration//GEN-END:variables
 }

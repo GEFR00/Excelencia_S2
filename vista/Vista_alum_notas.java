@@ -37,6 +37,7 @@ public class Vista_alum_notas extends javax.swing.JFrame {
         Text_notas_notas01 = new javax.swing.JLabel();
         Text_notas_notas02 = new javax.swing.JLabel();
         Button_alum_notas_back = new javax.swing.JButton();
+        alum_notas_LogOut = new javax.swing.JButton();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -63,6 +64,13 @@ public class Vista_alum_notas extends javax.swing.JFrame {
         Button_alum_notas_back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Button_alum_notas_backMouseClicked(evt);
+            }
+        });
+
+        alum_notas_LogOut.setText("Cerrar Sesion");
+        alum_notas_LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                alum_notas_LogOutMouseClicked(evt);
             }
         });
 
@@ -93,11 +101,15 @@ public class Vista_alum_notas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Button_alum_notas_back)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(alum_notas_LogOut))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addComponent(alum_notas_LogOut)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
@@ -122,6 +134,12 @@ public class Vista_alum_notas extends javax.swing.JFrame {
         vista_alum.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_alum_notas_backMouseClicked
+
+    private void alum_notas_LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_alum_notas_LogOutMouseClicked
+        Select_user select_user = new Select_user();
+        select_user.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_alum_notas_LogOutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -164,6 +182,7 @@ public class Vista_alum_notas extends javax.swing.JFrame {
     private javax.swing.JLabel Text_notas_asignaturas02;
     private javax.swing.JLabel Text_notas_notas01;
     private javax.swing.JLabel Text_notas_notas02;
+    private javax.swing.JButton alum_notas_LogOut;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

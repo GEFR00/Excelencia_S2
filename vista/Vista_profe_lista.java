@@ -36,6 +36,7 @@ public class Vista_profe_lista extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         Text_lista_lista02 = new javax.swing.JList<>();
         Button_profe_lista_back = new javax.swing.JButton();
+        profe_lista_LogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,6 +52,13 @@ public class Vista_profe_lista extends javax.swing.JFrame {
         Button_profe_lista_back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Button_profe_lista_backMouseClicked(evt);
+            }
+        });
+
+        profe_lista_LogOut.setText("Cerrar Sesion");
+        profe_lista_LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profe_lista_LogOutMouseClicked(evt);
             }
         });
 
@@ -77,11 +85,15 @@ public class Vista_profe_lista extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Button_profe_lista_back)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(profe_lista_LogOut))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addComponent(profe_lista_LogOut)
+                .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
@@ -104,6 +116,12 @@ public class Vista_profe_lista extends javax.swing.JFrame {
         vista_profe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_profe_lista_backMouseClicked
+
+    private void profe_lista_LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profe_lista_LogOutMouseClicked
+        Select_user select_user = new Select_user();
+        select_user.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_profe_lista_LogOutMouseClicked
 
     /**
      * @param args the command line arguments
@@ -150,5 +168,6 @@ public class Vista_profe_lista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton profe_lista_LogOut;
     // End of variables declaration//GEN-END:variables
 }

@@ -32,12 +32,17 @@
               <Component id="Button_alum_lista_back" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="alum_lista_LogOut" min="-2" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <Component id="alum_lista_LogOut" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               <Component id="jScrollPane2" min="-2" pref="207" max="-2" attributes="0"/>
               <EmptySpace pref="32" max="32767" attributes="0"/>
               <Component id="Button_alum_lista_back" min="-2" max="-2" attributes="0"/>
@@ -71,6 +76,14 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_alum_lista_backMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="alum_lista_LogOut">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cerrar Sesion"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="alum_lista_LogOutMouseClicked"/>
       </Events>
     </Component>
   </SubComponents>
