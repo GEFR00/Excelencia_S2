@@ -90,20 +90,20 @@ public class Select_user extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_select_user01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_select_user01MouseClicked
-        Login login = new Login();
-        login.setVisible(true);
+        Login_profe login_profe = new Login_profe();
+        login_profe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_select_user01MouseClicked
 
     private void Button_select_user02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_select_user02MouseClicked
-        Login login = new Login();
+        Login_alum login = new Login_alum();
         login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_select_user02MouseClicked
 
     private void Button_select_user03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_select_user03MouseClicked
-        Login login = new Login();
-        login.setVisible(true);
+        Login_admin login_admin = new Login_admin();
+        login_admin.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_Button_select_user03MouseClicked
 
