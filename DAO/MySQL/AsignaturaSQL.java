@@ -2,6 +2,7 @@ package DAO.MySQL;
 import DAO.AsignaturaDAO;
 import java.util.List;
 import modelo.Asignatura;
+import vista.Login;
 
 public class AsignaturaSQL implements AsignaturaDAO {
 
@@ -30,5 +31,7 @@ public class AsignaturaSQL implements AsignaturaDAO {
     public Asignatura obtener(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
     
 }

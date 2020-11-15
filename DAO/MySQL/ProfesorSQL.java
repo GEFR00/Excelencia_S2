@@ -2,6 +2,7 @@ package DAO.MySQL;
 import DAO.ProfesorDAO;
 import java.util.List;
 import modelo.Profesor;
+import vista.Login;
 
 public class ProfesorSQL implements ProfesorDAO {
 
@@ -30,6 +31,9 @@ public class ProfesorSQL implements ProfesorDAO {
     public Profesor obtener(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
+
     
     
 }
