@@ -29,23 +29,27 @@
                   <Group type="102" attributes="0">
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="Texto_profe_profe02" min="-2" pref="89" max="-2" attributes="0"/>
+                      <Component id="Text_profe_profe02" min="-2" pref="89" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="Texto_profe_asignatura02" min="-2" pref="89" max="-2" attributes="0"/>
+                      <Component id="Text_profe_asignatura02" min="-2" pref="89" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="Texto_profe_profe01" min="-2" pref="89" max="-2" attributes="0"/>
+                      <Component id="Text_profe_profe01" min="-2" pref="89" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="Texto_profe_asignatura01" min="-2" pref="89" max="-2" attributes="0"/>
+                      <Component id="Text_profe_asignatura01" min="-2" pref="89" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="45" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="Button_alum_profe_back" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -55,18 +59,19 @@
               <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Texto_profe_profe01" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="Text_profe_profe01" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Texto_profe_asignatura01" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="Text_profe_asignatura01" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="96" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Texto_profe_profe02" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="Text_profe_profe02" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Texto_profe_asignatura02" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                  <Component id="Text_profe_asignatura02" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+              <Component id="Button_alum_profe_back" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -77,28 +82,36 @@
         <Property name="text" type="java.lang.String" value="Profesor: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="Texto_profe_profe01">
+    <Component class="javax.swing.JLabel" name="Text_profe_profe01">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Asignatura: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="Texto_profe_asignatura01">
+    <Component class="javax.swing.JLabel" name="Text_profe_asignatura01">
     </Component>
-    <Component class="javax.swing.JLabel" name="Texto_profe_profe02">
+    <Component class="javax.swing.JLabel" name="Text_profe_profe02">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="text" type="java.lang.String" value="Asignatura: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="Texto_profe_asignatura02">
+    <Component class="javax.swing.JLabel" name="Text_profe_asignatura02">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
         <Property name="text" type="java.lang.String" value="Profesor: "/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Button_alum_profe_back">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Volver"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_alum_profe_backMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

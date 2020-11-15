@@ -32,20 +32,22 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         Button_login = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
+        Button_login_back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Usuario            :");
 
-        Text_login01.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Text_login01ActionPerformed(evt);
-            }
-        });
-
         jLabel2.setText("Contraseña     :");
 
         Button_login.setText("Iniciar sesion");
+
+        Button_login_back.setText("Volver");
+        Button_login_back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_login_backMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -62,6 +64,9 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(Text_login01, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
                     .addComponent(jPasswordField1))
                 .addContainerGap(101, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Button_login_back)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -76,16 +81,19 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51)
                 .addComponent(Button_login)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addComponent(Button_login_back))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Text_login01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text_login01ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Text_login01ActionPerformed
+    private void Button_login_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_login_backMouseClicked
+        Select_user select_user = new Select_user();
+        select_user.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Button_login_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -124,6 +132,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_login;
+    private javax.swing.JButton Button_login_back;
     private javax.swing.JTextField Text_login01;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

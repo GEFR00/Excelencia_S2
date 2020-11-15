@@ -25,10 +25,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Button_vista_alum03" min="-2" max="-2" attributes="0"/>
-                  <Component id="Button_vista_alum02" min="-2" max="-2" attributes="0"/>
-                  <Component id="Button_vista_alum01" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="Button_vista_alum03" max="32767" attributes="0"/>
+                  <Component id="Button_vista_alum02" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Button_vista_alum01" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="138" max="32767" attributes="0"/>
           </Group>
