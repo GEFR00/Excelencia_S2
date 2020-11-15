@@ -69,7 +69,23 @@ public class AlumnoSQL implements AlumnoDAO {
         stmt.close();
         rs.close();
     }
-
+    
+    public boolean estaAlumno(Login_alum obj) throws SQLException {
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", "Jugarplay2");
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(VERIFICA);
+        boolean encontrado = false;
+        
+        while(rs.next()) {
+            if(rs.getString("login").equals(obj.texto_alum())) {
+                encontrado = true;
+                return encontrado;
+            } else { 
+            }
+        }
+        
+        return encontrado;
+    }
     
 }
 
