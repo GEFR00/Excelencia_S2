@@ -53,16 +53,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="    Ver notas    "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_vista_alum01MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button_vista_alum02">
       <Properties>
         <Property name="text" type="java.lang.String" value="     Ver lista      "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_vista_alum02MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button_vista_alum03">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver profesores"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_vista_alum03MouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -34,10 +34,25 @@ public class Vista_alum extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Button_vista_alum01.setText("    Ver notas    ");
+        Button_vista_alum01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_vista_alum01MouseClicked(evt);
+            }
+        });
 
         Button_vista_alum02.setText("     Ver lista      ");
+        Button_vista_alum02.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_vista_alum02MouseClicked(evt);
+            }
+        });
 
         Button_vista_alum03.setText("Ver profesores");
+        Button_vista_alum03.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_vista_alum03MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,6 +81,24 @@ public class Vista_alum extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Button_vista_alum01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_vista_alum01MouseClicked
+        Vista_alum_notas vista_alum_notas = new Vista_alum_notas();
+        vista_alum_notas.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Button_vista_alum01MouseClicked
+
+    private void Button_vista_alum02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_vista_alum02MouseClicked
+        Vista_alum_lista vista_alum_lista = new Vista_alum_lista();
+        vista_alum_lista.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Button_vista_alum02MouseClicked
+
+    private void Button_vista_alum03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_vista_alum03MouseClicked
+        Vista_alum_profe vista_alum_profe = new Vista_alum_profe();
+        vista_alum_profe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Button_vista_alum03MouseClicked
 
     /**
      * @param args the command line arguments
