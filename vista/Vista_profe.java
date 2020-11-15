@@ -34,10 +34,25 @@ public class Vista_profe extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Button_vista_profe01.setText("Ver lista por asignatura");
+        Button_vista_profe01.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_vista_profe01MouseClicked(evt);
+            }
+        });
 
         Button_vista_profe02.setText("       Ver profesores      ");
+        Button_vista_profe02.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_vista_profe02MouseClicked(evt);
+            }
+        });
 
         Button_vista_profe03.setText("      Agregar notas        ");
+        Button_vista_profe03.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_vista_profe03MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -45,10 +60,10 @@ public class Vista_profe extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(122, 122, 122)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Button_vista_profe03)
-                    .addComponent(Button_vista_profe02)
-                    .addComponent(Button_vista_profe01))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Button_vista_profe01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button_vista_profe02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button_vista_profe03, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -66,6 +81,24 @@ public class Vista_profe extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Button_vista_profe01MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_vista_profe01MouseClicked
+        Vista_profe_lista vista_profe_lista = new Vista_profe_lista();
+        vista_profe_lista.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Button_vista_profe01MouseClicked
+
+    private void Button_vista_profe02MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_vista_profe02MouseClicked
+        Vista_profe_profe vista_profe_profe = new Vista_profe_profe();
+        vista_profe_profe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Button_vista_profe02MouseClicked
+
+    private void Button_vista_profe03MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_vista_profe03MouseClicked
+        Vista_profe_agregar vista_profe_agregar = new Vista_profe_agregar();
+        vista_profe_agregar.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Button_vista_profe03MouseClicked
 
     /**
      * @param args the command line arguments

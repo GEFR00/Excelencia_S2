@@ -36,6 +36,7 @@ public class Vista_alum_notas extends javax.swing.JFrame {
         Text_notas_asignaturas02 = new javax.swing.JLabel();
         Text_notas_notas01 = new javax.swing.JLabel();
         Text_notas_notas02 = new javax.swing.JLabel();
+        Button_alum_notas_back = new javax.swing.JButton();
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -57,6 +58,13 @@ public class Vista_alum_notas extends javax.swing.JFrame {
         jLabel3.setText("Asignatura: ");
 
         jLabel4.setText("Nota: ");
+
+        Button_alum_notas_back.setText("Volver");
+        Button_alum_notas_back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_alum_notas_backMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,6 +90,9 @@ public class Vista_alum_notas extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(Text_notas_notas02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(53, 76, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Button_alum_notas_back)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,12 +109,19 @@ public class Vista_alum_notas extends javax.swing.JFrame {
                     .addComponent(jLabel4)
                     .addComponent(Text_notas_asignaturas02, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Text_notas_notas02, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100))
+                .addGap(78, 78, 78)
+                .addComponent(Button_alum_notas_back))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Button_alum_notas_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_alum_notas_backMouseClicked
+        Vista_alum vista_alum = new Vista_alum();
+        vista_alum.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_Button_alum_notas_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -141,6 +159,7 @@ public class Vista_alum_notas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Button_alum_notas_back;
     private javax.swing.JLabel Text_notas_asignatura01;
     private javax.swing.JLabel Text_notas_asignaturas02;
     private javax.swing.JLabel Text_notas_notas01;

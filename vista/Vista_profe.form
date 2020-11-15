@@ -25,10 +25,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Button_vista_profe03" min="-2" max="-2" attributes="0"/>
-                  <Component id="Button_vista_profe02" min="-2" max="-2" attributes="0"/>
-                  <Component id="Button_vista_profe01" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="Button_vista_profe01" max="32767" attributes="0"/>
+                  <Component id="Button_vista_profe02" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Button_vista_profe03" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="135" max="32767" attributes="0"/>
           </Group>
@@ -53,16 +53,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver lista por asignatura"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_vista_profe01MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button_vista_profe02">
       <Properties>
         <Property name="text" type="java.lang.String" value="       Ver profesores      "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_vista_profe02MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button_vista_profe03">
       <Properties>
         <Property name="text" type="java.lang.String" value="      Agregar notas        "/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_vista_profe03MouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

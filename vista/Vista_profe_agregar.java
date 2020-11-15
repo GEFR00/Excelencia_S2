@@ -9,12 +9,12 @@ package vista;
  *
  * @author Lobo
  */
-public class Vista_alum_lista extends javax.swing.JFrame {
+public class Vista_profe_agregar extends javax.swing.JFrame {
 
     /**
-     * Creates new form Vista_alum_lista
+     * Creates new form Vista_profe_agregar
      */
-    public Vista_alum_lista() {
+    public Vista_profe_agregar() {
         initComponents();
     }
 
@@ -27,18 +27,14 @@ public class Vista_alum_lista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2 = new javax.swing.JScrollPane();
-        Text_alum_lista = new javax.swing.JList<>();
-        Button_alum_lista_back = new javax.swing.JButton();
+        Button_profe_agregar_back = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jScrollPane2.setViewportView(Text_alum_lista);
-
-        Button_alum_lista_back.setText("Volver");
-        Button_alum_lista_back.addMouseListener(new java.awt.event.MouseAdapter() {
+        Button_profe_agregar_back.setText("Volver");
+        Button_profe_agregar_back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Button_alum_lista_backMouseClicked(evt);
+                Button_profe_agregar_backMouseClicked(evt);
             }
         });
 
@@ -47,31 +43,25 @@ public class Vista_alum_lista extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Button_alum_lista_back)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(Button_profe_agregar_back)
+                .addGap(0, 328, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(Button_alum_lista_back))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 278, Short.MAX_VALUE)
+                .addComponent(Button_profe_agregar_back))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Button_alum_lista_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_alum_lista_backMouseClicked
-        Vista_alum vista_alum = new Vista_alum();
-        vista_alum.setVisible(true);
+    private void Button_profe_agregar_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_profe_agregar_backMouseClicked
+        Vista_profe vista_profe = new Vista_profe();
+        vista_profe.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_Button_alum_lista_backMouseClicked
+    }//GEN-LAST:event_Button_profe_agregar_backMouseClicked
 
     /**
      * @param args the command line arguments
@@ -90,27 +80,25 @@ public class Vista_alum_lista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Vista_alum_lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_profe_agregar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Vista_alum_lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_profe_agregar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Vista_alum_lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_profe_agregar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Vista_alum_lista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vista_profe_agregar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Vista_alum_lista().setVisible(true);
+                new Vista_profe_agregar().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Button_alum_lista_back;
-    private javax.swing.JList<String> Text_alum_lista;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton Button_profe_agregar_back;
     // End of variables declaration//GEN-END:variables
 }
