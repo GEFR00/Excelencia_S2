@@ -5,7 +5,8 @@ import modelo.Asignatura;
 
 public class AsignaturaSQL implements AsignaturaDAO {
 
-    //Sentencias SQL
+    //Comienzo de sentencias SQL
+    //Metodos para realizar CRUD
     @Override
     public void insertar(Asignatura alum) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

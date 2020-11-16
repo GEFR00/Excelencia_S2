@@ -41,7 +41,8 @@ public class ProfesorSQL implements ProfesorDAO {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public boolean verificaProfe(Login_profe obj) throws SQLException {
+    //------------------------ METODOS --------------------------------
+    public boolean verificaProfe(Login_profe obj) throws SQLException { //Metodo que verifica el Login del profesor 
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(VERIFICA);
@@ -61,7 +62,7 @@ public class ProfesorSQL implements ProfesorDAO {
         return encontrado;
     }
     
-    public int getIdProfesor(Login_profe obj) throws SQLException {
+    public int getIdProfesor(Login_profe obj) throws SQLException { //Metodo que entrega el ID del profesor. 
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(OBTENID);
@@ -80,7 +81,7 @@ public class ProfesorSQL implements ProfesorDAO {
         return id;
     }
     
-    public void listaProfesores(Login_profe obj) throws SQLException {
+    public void listaProfesores(Login_profe obj) throws SQLException { //Metodo que muestra a todos los profesores. 
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(VERPROFES);
@@ -95,7 +96,7 @@ public class ProfesorSQL implements ProfesorDAO {
         }    
     }
     
-    public void verListaAlumnos(Login_profe obj) throws SQLException {
+    public void verListaAlumnos(Login_profe obj) throws SQLException { //Metodo que muestra a los alumnos según asignatura del profesor. 
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         ProfesorSQL profeSQL = new ProfesorSQL();

@@ -41,6 +41,7 @@ public class AlumnoSQL implements AlumnoDAO {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    //------------------------ METODOS --------------------------------
     public boolean verificaAlum(Login_alum obj) throws SQLException { //verifica el logeo del alumno
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
@@ -109,7 +110,7 @@ public class AlumnoSQL implements AlumnoDAO {
         
     }
     
-    public void obtenerNotas(Login_alum obj) throws SQLException {
+    public void obtenerNotas(Login_alum obj) throws SQLException {  //Metodo que entrega notas + la asignatura. 
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         AlumnoSQL aluSQL = new AlumnoSQL();
@@ -135,6 +136,53 @@ public class AlumnoSQL implements AlumnoDAO {
         con.close();
         stmt.close();
         rss.close();
+    }
+    
+    public void verProfesores(Login_alum obj) throws SQLException { //Codigo con problemas
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
+        Statement stmt = con.createStatement();
+        AlumnoSQL aluSQL = new AlumnoSQL();
+        idAlumno = Integer.toString(aluSQL.getIdAlum(obj));
+        ResultSet rssss = null;
+        ResultSet rs = stmt.executeQuery("SELECT nivelAlumn_id FROM alumno WHERE id="+idAlumno);
+        String nivel_alumno = null, profesor_id = null, nombre_asig = null, nombre_profe = null, apellido_profe = null, nombreProfe = null;
+        
+        while(rs.next()) {
+            nivel_alumno = Integer.toString(rs.getInt("nivelAlumn_id"));
+        }
+        
+        rs.close();
+        
+        ResultSet rss = stmt.executeQuery("SELECT nombre FROM asignatura WHERE nivel_id="+nivel_alumno);
+        while(rss.next()) {
+            nombre_asig = rs.getString("nombre");
+            System.out.println("Nombre de Asignatura: "+nombre_asig);
+        }
+        
+        rss.close();
+        
+        ResultSet rsss = stmt.executeQuery("SELECT profesor_id FROM asignatura WHERE nivel_id="+nivel_alumno);
+        while(rsss.next()) {
+            profesor_id = Integer.toString(rsss.getInt("profesor_id"));
+            rssss = stmt.executeQuery("SELECT nombre, apellidos FROM profesor WHERE id="+profesor_id);
+            while(rssss.next()) {
+                nombre_profe = rssss.getString("nombre");
+                apellido_profe = rssss.getString("apellidos");
+                nombreProfe = nombre_profe+" "+apellido_profe;
+                System.out.println("Nombre profesor: "+nombreProfe);
+            }
+            
+            
+        }
+        
+        con.close();
+        stmt.close();
+        
+       
+        rsss.close();
+        rssss.close();
+        
+        
     }
 }
     

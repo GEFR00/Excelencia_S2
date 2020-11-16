@@ -40,6 +40,7 @@ public class AdminSQL implements AdminDAO{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    //------------------------ METODOS --------------------------------
     public boolean verificaAdmin(Login_admin obj) throws SQLException {
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
