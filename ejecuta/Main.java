@@ -1,26 +1,29 @@
 package ejecuta;
 import Controlador.*;
+import DAO.MySQL.AlumnoSQL;
+import DAO.MySQL.ProfesorSQL;
+import java.sql.SQLException;
 import modelo.ConexionBDEscuela;
-import modelo.*;
 import vista.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         
         Welcome vistaWel = new Welcome();
-        Select_user selectUser = new Select_user();
-        Modelo model = new Modelo();
-        Login_admin logadmin = new Login_admin();
-        Login_alum logalum = new Login_alum();
-        Login_profe logprofe = new Login_profe();
-        ConexionBDEscuela startconexion = new ConexionBDEscuela();
+        ConexionBDEscuela con = new ConexionBDEscuela();
         Controlador ctrl = new Controlador(vistaWel);
-
+        AlumnoSQL ejeSQL = new AlumnoSQL();
+        Login_alum logAlum = new Login_alum();
+        Login_profe logProfe = new Login_profe();
+        ProfesorSQL ejeProfeSQL = new ProfesorSQL();
         
-        startconexion.getConexion();
+        con.getConexion();
         ctrl.iniciar();
-        ctrl.comprueba(logalum, logadmin, logprofe);
-        
-        
+        System.out.println(ejeSQL.getIdAlum(logAlum));
+        ejeSQL.obtenerNotas(logAlum);
+        ejeSQL.imprimeLista(logAlum);
+        ejeProfeSQL.listaProfesores(logProfe);
+        ejeProfeSQL.verListaAlumnos(logProfe);
+ 
     }
 }

@@ -37,11 +37,6 @@ public class Vista_admin extends javax.swing.JFrame {
         Button_vista_admin01.setText("    Agregar usuario    ");
 
         Button_vista_admin02.setText("    Eliminar usuario     ");
-        Button_vista_admin02.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button_vista_admin02ActionPerformed(evt);
-            }
-        });
 
         Button_vista_admin03.setText("Modificar informacion");
 
@@ -83,10 +78,6 @@ public class Vista_admin extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Button_vista_admin02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_vista_admin02ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Button_vista_admin02ActionPerformed
 
     private void Admin_LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Admin_LogOutMouseClicked
         Select_user select_user = new Select_user();

@@ -1,14 +1,7 @@
 package DAO.MySQL;
 import DAO.AlumnoDAO;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import modelo.Alumno;
 import vista.*;
 
@@ -17,12 +10,12 @@ public class AlumnoSQL implements AlumnoDAO {
     private Connection con;
     final String VERIFICA = "SELECT login FROM alumno"; //cambiar y usar id
     final String OBTENID = "SELECT * FROM alumno";
-    String notaAlumId = null;
-    
+    String notaAlumId = null, idAlumno = null;
     private String password = "Jugarplay2";
     
     
-    //Sentencias SQL
+    //Comienzo de sentencias SQL
+    //Metodos para realizar CRUD
     @Override
     public void insertar(Alumno alum) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -48,7 +41,7 @@ public class AlumnoSQL implements AlumnoDAO {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public boolean verificaAlum(Login_alum obj) throws SQLException {
+    public boolean verificaAlum(Login_alum obj) throws SQLException { //verifica el logeo del alumno
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(VERIFICA);
@@ -68,7 +61,7 @@ public class AlumnoSQL implements AlumnoDAO {
         return encontrado;
     }
     
-    public int getIdAlum(Login_alum obj) throws SQLException {
+    public int getIdAlum(Login_alum obj) throws SQLException {  //Metodo que obtiene el ID del Alumno
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(OBTENID);
@@ -87,34 +80,65 @@ public class AlumnoSQL implements AlumnoDAO {
         return id;
     }
     
-    public void obtenerNotas(Login_alum obj) throws SQLException {
+    public void imprimeLista(Login_alum obj) throws SQLException {  //Metodo que imprime la lista de los alumnos
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         AlumnoSQL aluSQL = new AlumnoSQL();
-        notaAlumId = Integer.toString(aluSQL.getIdAlum(obj));
-        ResultSet rs = stmt.executeQuery("SELECT nota FROM nota WHERE alumno_id="+notaAlumId);
-        
+        ResultSet rs = stmt.executeQuery("SELECT nivelAlumn_id FROM alumno WHERE id="+Integer.toString(aluSQL.getIdAlum(obj)));
+        String nivel_id = null;
         
         while(rs.next()) {
-            float nota = rs.getFloat("nota");
-            System.out.println("Nota: "+nota);
+            nivel_id = Integer.toString(rs.getInt("nivelAlumn_id"));
         }
         
         rs.close();
         
-        ResultSet rss = stmt.executeQuery("SELECT asignatura_id FROM nota WHERE alumno_id="+notaAlumId);
+        String compa_alumno;
+        ResultSet rss = stmt.executeQuery("SELECT nombre, apellidos FROM alumno WHERE nivelAlumn_id="+nivel_id);
+        
+        System.out.println("Lista de Alumnos:");
         while(rss.next()) {
-            int asignatura = rss.getInt("asignatura_id");
+            String nombre = rss.getString("nombre");
+            String apellido = rss.getString("apellidos");
+            compa_alumno = nombre+" "+apellido;
+            System.out.println("Alumno: "+compa_alumno);
+            
+        }
+        
+        rss.close();
+        
+    }
+    
+    public void obtenerNotas(Login_alum obj) throws SQLException {
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
+        Statement stmt = con.createStatement();
+        AlumnoSQL aluSQL = new AlumnoSQL();
+        idAlumno = Integer.toString(aluSQL.getIdAlum(obj));
+        ResultSet rs = stmt.executeQuery("SELECT nota FROM nota WHERE alumno_id="+idAlumno);
+        float nota = 0;
+        int asignatura = 0;
+        String nombre_asig = null;
+        
+        while(rs.next()) {
+                nota = rs.getFloat("nota"); 
+                System.out.println("Nota: "+nota);
+            }
+        
+        rs.close();
+        
+        ResultSet rss = stmt.executeQuery("SELECT asignatura_id FROM nota WHERE alumno_id="+idAlumno);
+        while(rss.next()) {
+            asignatura = rss.getInt("asignatura_id");
             System.out.println("Asignatura: "+asignatura);
         }
         
         con.close();
         stmt.close();
         rss.close();
-   
     }
-        
 }
+    
+
 
 
 

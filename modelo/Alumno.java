@@ -52,13 +52,5 @@ public class Alumno {
         this.id = id;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
 }

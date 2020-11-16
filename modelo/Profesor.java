@@ -60,8 +60,4 @@ public class Profesor {
     public void setId(int id) {
         this.id = id;
     }
-    
-    
-    
-    
 }

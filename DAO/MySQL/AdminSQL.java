@@ -1,11 +1,6 @@
 package DAO.MySQL;
-
 import DAO.AdminDAO;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.List;
 import modelo.Administrador;
 import vista.*;
@@ -15,6 +10,10 @@ public class AdminSQL implements AdminDAO{
     private String login = "GerardoAD";
     private Connection con;
     final String VERIFICA = "SELECT login FROM administrador"; //cambiar y usar id
+    private String password = "Jugarplay2";
+    
+    //Comienzo de sentencias SQL
+    //Metodos para realizar CRUD
     
     @Override
     public void insertar(Administrador obj) {
@@ -42,7 +41,7 @@ public class AdminSQL implements AdminDAO{
     }
     
     public boolean verificaAdmin(Login_admin obj) throws SQLException {
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", "1234");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/escuela", "root", password);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(VERIFICA);
         boolean encontrado = false;

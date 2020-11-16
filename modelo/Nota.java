@@ -52,8 +52,4 @@ public class Nota {
     public void setAlumno_id(int alumno_id) {
         this.alumno_id = alumno_id;
     }
-    
-    
-    
-    
 }

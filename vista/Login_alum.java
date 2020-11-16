@@ -62,11 +62,6 @@ public class Login_alum extends javax.swing.JFrame {
         });
 
         Text_login_alum02.setText("febrerO12dies");
-        Text_login_alum02.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Text_login_alum02ActionPerformed(evt);
-            }
-        });
 
         Button_login_back.setText("Volver");
         Button_login_back.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -138,10 +133,6 @@ public class Login_alum extends javax.swing.JFrame {
             Logger.getLogger(Login_alum.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_Button_login_alumMouseClicked
-
-    private void Text_login_alum02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text_login_alum02ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Text_login_alum02ActionPerformed
 
     /**
      * @param args the command line arguments

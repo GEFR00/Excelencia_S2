@@ -98,9 +98,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="febrerO12dies"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Text_login_alum02ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button_login_back">
       <Properties>

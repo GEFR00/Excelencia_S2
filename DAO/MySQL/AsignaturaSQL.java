@@ -2,7 +2,6 @@ package DAO.MySQL;
 import DAO.AsignaturaDAO;
 import java.util.List;
 import modelo.Asignatura;
-import vista.Login;
 
 public class AsignaturaSQL implements AsignaturaDAO {
 

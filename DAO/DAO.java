@@ -14,5 +14,4 @@ public interface DAO<T, K> {
     
     T obtener(K id);
     
-
 }

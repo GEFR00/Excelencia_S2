@@ -1,31 +1,35 @@
 package Controlador;
 import java.awt.event.*;
+import javax.swing.JTextField;
 import modelo.Modelo;
-import vista.Login;
+import vista.Login_alum;
 import vista.Select_user;
 
-public class CtrlLogin implements ActionListener {
+public class CtrlLogin {
     private Select_user selectUser; 
-    private Login log;
+    private Login_alum log;
     private Modelo model;
     
-    public CtrlLogin(Select_user sel, Modelo mod, Login log) {
+    public CtrlLogin(Select_user sel, Modelo mod, Login_alum log) {
         selectUser = sel;
         model = mod;
         this.log = log;
-        selectUser.Button_select_user01.addActionListener((ActionListener) this);
-        selectUser.Button_select_user02.addActionListener((ActionListener) this);
-        selectUser.Button_select_user03.addActionListener((ActionListener) this);
-        this.log.Button_login.addActionListener((ActionListener) this);
     }
     
-    @Override
-    public void actionPerformed(ActionEvent e) {
+    public void guardaInput(Login_alum obj) {
+        ActionListener escucha = new ActionListener() {
+            
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.setTextUser(obj.Text_login_alum01.getText());
+                System.out.println("Input: "+model.getTextUser());
+            }
+        };
         
-        model.setTextUser(log.Text_login01.getText());
-        log.texto_prueba.setText(model.getTextUser());
-        //System.out.println(model.getTextUser());
+        obj.Button_login_alum.addActionListener(escucha);
     }
+    
+   
     
     
     

@@ -2,11 +2,13 @@ package modelo;
 public class Administrador {
     //Atributos
     private String login, email, clave;
+    private int id;
     
-    public Administrador(String login, String email, String clave) {
+    public Administrador(String login, String email, String clave, int id) {
         this.clave = clave;
         this.login = login;
         this.email = email;
+        this.id = id;
     }
 
     public String getLogin() {
